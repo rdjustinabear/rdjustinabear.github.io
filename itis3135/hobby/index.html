@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A placeholder for my ITIS 3135 hobby website.">
+    <title>Hobby Site | In Progress</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <style>
+        :root {
+            color-scheme: light;
+            --ink: #25302b;
+            --muted: #586b60;
+            --paper: #f5f0df;
+            --panel: #fffdf6;
+            --accent: #a44d32;
+            --accent-dark: #71351f;
+            --line: #d8cdb4;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            color: var(--ink);
+            background: var(--paper);
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header, main, footer {
+            width: min(900px, calc(100% - 2rem));
+            margin-inline: auto;
+        }
+
+        header { padding: 3rem 0 1.5rem; }
+        header h1 { margin: 0; color: var(--accent-dark); font-size: clamp(2rem, 6vw, 3.5rem); }
+        header p, footer { color: var(--muted); }
+
+        main {
+            margin-bottom: 2rem;
+            padding: clamp(1.25rem, 4vw, 2.5rem);
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 1rem;
+            box-shadow: 0 12px 28px rgb(56 43 25 / 9%);
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .5rem 1rem;
+            margin: 1rem 0 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        a { color: var(--accent-dark); font-weight: 700; }
+        a:hover, a:focus-visible { color: var(--accent); }
+        .status { color: var(--accent-dark); font-size: 1.25rem; font-weight: 700; }
+        .checklist { padding-left: 1.25rem; }
+        .checklist li { margin-block: .35rem; }
+        footer { padding: 0 0 2rem; text-align: center; }
+
+        @media (prefers-reduced-motion: no-preference) {
+            a { transition: color 150ms ease-in-out; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <p>ITIS 3135 · Hobby project</p>
+        <h1>My Hobby Website</h1>
+        <p>A starter page for the multi-section hobby assignment.</p>
+        <nav aria-label="Hobby site navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="../index.html">Course site</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="home">
+        <h2>Website in progress</h2>
+        <p class="status">This is a placeholder—not the completed assignment.</p>
+        <p>The hobby, writing, images, and final section navigation will be added here.</p>
+        <h3>Planned sections</h3>
+        <ul class="checklist">
+            <li>What — an introduction to the hobby</li>
+            <li>Who — the person or people behind the site</li>
+            <li>When, Where, How, and Why</li>
+            <li>AI Prompts and image credits</li>
+        </ul>
+        <p>Working assets can be stored in this page’s <strong>images</strong> folder.</p>
+    </main>
+
+    <footer>
+        <p>Hobby site placeholder · ITIS 3135</p>
+    </footer>
+</body>
+</html>
