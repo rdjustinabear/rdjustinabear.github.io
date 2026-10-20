@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A fan's guide to the world, play, and atmosphere of Touhou Project: Embodiment of Scarlet Devil.">
-    <title>Scarlet Danmaku | Touhou EoSD</title>
+    <title>Scarlet Danmaku | What — A Scarlet-Sky Adventure</title>
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <style>
         :root {
@@ -25,7 +25,8 @@
         html { scroll-behavior: smooth; }
 
         body {
-            margin: 0;
+            max-width: 1050px;
+            margin: 0 auto;
             color: var(--ink);
             background-color: var(--paper);
             background-image:
@@ -35,14 +36,11 @@
             line-height: 1.7;
         }
 
-        header, main, footer {
-            width: min(1050px, calc(100% - 2rem));
-            margin-inline: auto;
-        }
+        header, main, footer { max-width: 1050px; margin: 0 auto; }
 
         header { padding: 2.5rem 0 1.5rem; }
         .eyebrow { margin: 0; color: var(--accent-dark); font-variant: small-caps; letter-spacing: .12em; }
-        header h1 { margin: .2rem 0; color: var(--accent-dark); font-size: clamp(2.2rem, 7vw, 4.4rem); line-height: 1.1; }
+        header h1 { margin: .2rem 0; color: var(--accent-dark); font-family: "Palatino Linotype", "Book Antiqua", serif; font-size: clamp(2.2rem, 7vw, 4.4rem); line-height: 1.1; }
         header .intro { max-width: 62ch; margin: .7rem 0 1.25rem; color: var(--muted); }
 
         nav ul {
@@ -98,15 +96,14 @@
             margin: 1.5rem auto;
             padding: .7rem;
             background: #f8e5bd;
-            border: 1px solid #c98347;
+            box-shadow: inset 0 0 0 1px #c98347;
         }
 
         figure img {
             display: block;
-            width: 100%;
-            max-height: 310px;
-            object-fit: cover;
-            border: 1px solid rgba(112, 33, 30, 0.3);
+            max-width: 100%;
+            height: auto;
+            margin-inline: auto;
         }
 
         figcaption { margin-top: .5rem; color: var(--accent-dark); font-weight: 700; }
@@ -142,6 +139,7 @@
         </nav>
     </header>
 
+    <!-- Section IDs route the six hobby pages; reusable classes provide consistent visual styling. -->
     <main>
         <section id="what" aria-labelledby="what-heading">
             <h2 id="what-heading">What — A Scarlet-Sky Adventure</h2>
@@ -152,7 +150,7 @@
                 <p class="prompt"><em>AI-art prompt: “Create an original, flat Japanese-inspired paper-cut illustration of a scarlet moon, layered mountain silhouettes, and a distant shrine gate in warm vermilion and parchment tones; no lettering.”</em></p>
                 <figcaption>The scarlet mist rolls over Gensokyo.</figcaption>
             </figure>
-            <h3>At a glance</h3>
+            <h3>At a Glance</h3>
             <ul class="fact-list">
                 <li>Genre: vertically scrolling danmaku (bullet hell).</li>
                 <li>Setting: Gensokyo, where humans and supernatural beings coexist.</li>
@@ -169,7 +167,7 @@
                 <p class="prompt"><em>AI-art prompt: “Draw an original Japanese woodblock-inspired view of a grand red-roofed mansion at dusk, framed by two small paper lanterns; muted crimson, ink, and parchment palette; no characters or lettering.”</em></p>
                 <figcaption>The Scarlet Devil Mansion stands at the heart of the mystery.</figcaption>
             </figure>
-            <h3>Three sides of the story</h3>
+            <h3>Three Sides of the Story</h3>
             <ul class="fact-list">
                 <li>Reimu follows the incident as the Hakurei Shrine maiden.</li>
                 <li>Marisa investigates as a curious magician and playable rival.</li>
@@ -186,7 +184,7 @@
                 <p class="prompt"><em>AI-art prompt: “Make an original Japanese-inspired paper illustration of a crescent moon and a few stars above quiet indigo mountains, with a warm orange paper border; serene, simple shapes, no text.”</em></p>
                 <figcaption>A quiet evening makes room for one more spell-card attempt.</figcaption>
             </figure>
-            <h3>A gentle practice schedule</h3>
+            <h3>A Gentle Practice Schedule</h3>
             <ul class="fact-list">
                 <li>Warm up with a stage you already know.</li>
                 <li>Practice one difficult section or spell card in focused bursts.</li>
@@ -203,7 +201,7 @@
                 <p class="prompt"><em>AI-art prompt: “Create an original flat Japanese folk-art scene of a vermilion torii gate on a mountain path leading to a tiny shrine, with parchment-colored sky and pine silhouettes; no lettering.”</em></p>
                 <figcaption>A vermilion gate marks the way toward the Hakurei Shrine.</figcaption>
             </figure>
-            <h3>Places along the route</h3>
+            <h3>Places Along the Route</h3>
             <ul class="fact-list">
                 <li>The Hakurei Shrine: Reimu's home and a starting point for incidents.</li>
                 <li>Misty Lake: a broad, open stage watched over by the mansion's gatekeeper.</li>
@@ -220,7 +218,7 @@
                 <p class="prompt"><em>AI-art prompt: “Illustrate an original abstract bullet-hell pattern as orderly circles and arcs of small colored beads around a clear central lane on warm washi paper; graphic, nonviolent, no text.”</em></p>
                 <figcaption>Danmaku patterns reward patience and a clear path through the gaps.</figcaption>
             </figure>
-            <h3>Beginner's toolkit</h3>
+            <h3>Beginner's Toolkit</h3>
             <ul class="fact-list">
                 <li>Move carefully; you usually need less movement than you think.</li>
                 <li>Watch the player character and nearby gaps, not every bullet at once.</li>
@@ -237,7 +235,7 @@
                 <p class="prompt"><em>AI-art prompt: “Design an original Japanese-inspired spell-card emblem with a vermilion sun, elegant radiating lines, and simple paper talismans on a washi background; decorative and entirely free of words.”</em></p>
                 <figcaption>A spell card turns a duel into a vivid, patterned spectacle.</figcaption>
             </figure>
-            <h3>Reasons to return</h3>
+            <h3>Reasons to Return</h3>
             <ul class="fact-list">
                 <li>Memorable stage themes and character themes.</li>
                 <li>Distinct spell-card patterns that reward practice.</li>
@@ -248,6 +246,20 @@
 
     <footer>
         <p>Fan-made educational hobby site. Touhou Project and its characters belong to their respective creators; illustrations on this page are original SVG artwork.</p>
+        <section id="ai-prompts" aria-labelledby="ai-prompts-heading">
+            <h2 id="ai-prompts-heading">AI Prompts</h2>
+            <p>The six original SVG illustrations were created for this page from the italicized image prompts shown with their figures.</p>
+            <p>Each prompt describes the subject, composition, and warm paper-art palette used to keep the illustrations visually consistent.</p>
+            <p>The SVG files are stored locally in the images folder and scale to fit the page without losing their aspect ratio.</p>
+            <ul class="fact-list">
+                <li>Scarlet mist: a paper-cut scarlet moon above layered mountains and a distant shrine gate.</li>
+                <li>Mansion: a woodblock-inspired mansion at dusk with lanterns and a muted crimson palette.</li>
+                <li>Night: a crescent moon and stars above indigo mountains on warm paper.</li>
+                <li>Shrine: a vermilion torii on a mountain path, with pine silhouettes and parchment sky.</li>
+                <li>Danmaku: orderly colored arcs framing a clear central lane on washi paper.</li>
+                <li>Spell card: a vermilion sun, radiating lines, and paper talismans on washi.</li>
+            </ul>
+        </section>
     </footer>
 
     <script>
@@ -270,6 +282,7 @@
                     link.removeAttribute("aria-current");
                 }
             });
+            document.title = `Scarlet Danmaku | ${activeSection.querySelector("h2").textContent}`;
         }
 
         showSection();
