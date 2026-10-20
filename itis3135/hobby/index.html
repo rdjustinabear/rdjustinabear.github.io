@@ -106,13 +106,44 @@
             margin-inline: auto;
         }
 
+        .character-slide img { width: auto; max-height: 350px; object-fit: contain; }
+        .slideshow-controls { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; justify-content: center; }
+        .slideshow-controls button {
+            padding: .4rem .9rem;
+            color: var(--panel);
+            background: var(--accent-dark);
+            border: 0;
+            border-radius: 999px;
+            font: inherit;
+            cursor: pointer;
+        }
+        .slideshow-controls button:hover, .slideshow-controls button:focus-visible { background: var(--accent); }
+
         figcaption { margin-top: .5rem; color: var(--accent-dark); font-weight: 700; }
         .prompt { margin: .15rem 0 0; color: var(--muted); font-size: .9rem; font-weight: 400; }
         .prompt em { font-style: italic; }
         .fact-list { padding-left: 1.4rem; }
         .fact-list li { margin-block: .35rem; }
-        .course-link { color: var(--accent-dark); }
-        footer { padding: 0 0 2rem; color: var(--muted); text-align: center; }
+        footer {
+            margin: 2rem auto 0;
+            padding: 2rem 0;
+            color: var(--muted);
+            border-top: 1px solid var(--line);
+        }
+        .footer-tools { display: flex; flex-wrap: wrap; gap: .45rem .7rem; margin-top: 1rem; }
+        .footer-tools a {
+            display: block;
+            padding: .35rem .8rem;
+            color: var(--accent-dark);
+            border: 1px solid var(--accent-dark);
+            border-radius: 999px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .footer-tools a:hover, .footer-tools a:focus-visible {
+            color: var(--panel);
+            background: var(--accent-dark);
+        }
 
         .js-enabled section[hidden] { display: none; }
         @media (prefers-reduced-motion: reduce) {
@@ -134,21 +165,27 @@
                 <li><a href="#where">Where</a></li>
                 <li><a href="#how">How</a></li>
                 <li><a href="#why">Why</a></li>
-                <li><a class="course-link" href="../index.html">Course site</a></li>
+                <li><a href="#ai-prompts">AI Prompts</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Section IDs route the six hobby pages; reusable classes provide consistent visual styling. -->
+    <!-- Section IDs route the hobby pages; classes style reusable content and slideshow IDs connect accessible controls. -->
     <main>
         <section id="what" aria-labelledby="what-heading">
             <h2 id="what-heading">What — A Scarlet-Sky Adventure</h2>
-            <p class="lead"><i>Embodiment of Scarlet Devil</i> is a vertically scrolling bullet-hell game in which the shrine maiden Reimu Hakurei or magician Marisa Kirisame investigates a strange scarlet mist covering Gensokyo.</p>
-            <p>Players weave through patterned volleys, collect power, and challenge a procession of memorable residents. EoSD is the sixth Touhou game and the first Windows-era entry in the series.</p>
+            <p class="lead"><i>Embodiment of Scarlet Devil</i> (EoSD) is the sixth Touhou Project game and the first Windows-era entry. In this vertically scrolling bullet-hell adventure, shrine maiden Reimu Hakurei or magician Marisa Kirisame investigates a strange scarlet mist covering Gensokyo.</p>
+            <p>Touhou Project is created by ZUN, the musician and game developer behind the series. His distinctive music, characters, and world-building helped inspire a large fan community.</p>
             <figure>
-                <img src="images/eosd-mist.svg" alt="Original illustration of a scarlet moon rising above a misty mountain and shrine gate" width="900" height="420">
-                <p class="prompt"><em>AI-art prompt: “Create an original, flat Japanese-inspired paper-cut illustration of a scarlet moon, layered mountain silhouettes, and a distant shrine gate in warm vermilion and parchment tones; no lettering.”</em></p>
-                <figcaption>The scarlet mist rolls over Gensokyo.</figcaption>
+                <img src="images/ZUN_posing_with_his_games.jpg" alt="ZUN posing in a shop surrounded by Touhou games and character merchandise" width="1024" height="771">
+                <p class="prompt"><em>Image supplied in the project assets; it is a photograph, not AI-generated.</em></p>
+                <figcaption>ZUN, creator of Touhou Project, with a display of his games.</figcaption>
+            </figure>
+            <p>The sixth game, <i>Embodiment of Scarlet Devil</i>, begins when a scarlet mist blankets Gensokyo. Reimu and Marisa set out to discover its source.</p>
+            <figure>
+                <img src="images/911px-Th06cover.jpg" alt="Cover art for Touhou Koumakyou: Embodiment of Scarlet Devil" width="911" height="899" loading="lazy">
+                <p class="prompt"><em>Cover image supplied in the project assets; it is existing game artwork, not AI-generated.</em></p>
+                <figcaption>The cover of <i>Embodiment of Scarlet Devil</i>.</figcaption>
             </figure>
             <h3>At a Glance</h3>
             <ul class="fact-list">
@@ -160,19 +197,66 @@
 
         <section id="who" aria-labelledby="who-heading" hidden>
             <h2 id="who-heading">Who — Residents of the Scarlet Devil Mansion</h2>
-            <p>The journey brings Reimu and Marisa into conflict with the people behind the mist. Each stage introduces a new opponent with a distinct personality, theme, and danmaku style.</p>
-            <p>The mansion's residents include its gatekeeper Hong Meiling, library-dwelling magician Patchouli Knowledge, and the maid Sakuya Izayoi. At the center is its young mistress, Remilia Scarlet, alongside her younger sister Flandre.</p>
-            <figure>
-                <img src="images/eosd-castle.svg" alt="Original illustration of a red-roofed European-style mansion framed by paper lanterns" width="900" height="420" loading="lazy">
-                <p class="prompt"><em>AI-art prompt: “Draw an original Japanese woodblock-inspired view of a grand red-roofed mansion at dusk, framed by two small paper lanterns; muted crimson, ink, and parchment palette; no characters or lettering.”</em></p>
-                <figcaption>The Scarlet Devil Mansion stands at the heart of the mystery.</figcaption>
+            <p>Meet the heroines and mansion residents encountered on the way through EoSD. Use the controls to browse the character portraits and short introductions.</p>
+            <figure class="character-slide">
+                <img src="images/Th06Rumia.png" alt="Rumia, a small blonde-haired girl in a red dress" width="128" height="247">
+                <p class="character-description">Rumia is a carefree youkai who manipulates darkness and serves as the first stage boss.</p>
+                <p class="prompt"><em>Character image supplied in the project assets; it is existing game-related artwork, not AI-generated.</em></p>
+                <figcaption>Rumia</figcaption>
             </figure>
-            <h3>Three Sides of the Story</h3>
-            <ul class="fact-list">
-                <li>Reimu follows the incident as the Hakurei Shrine maiden.</li>
-                <li>Marisa investigates as a curious magician and playable rival.</li>
-                <li>The mansion's residents turn each confrontation into a characterful duel.</li>
-            </ul>
+            <figure class="character-slide" hidden>
+                <img src="images/884px-Sitting_Reimu_Original.png" alt="Reimu Hakurei in her red-and-white shrine maiden outfit" width="884" height="900" loading="lazy">
+                <p class="character-description">Reimu Hakurei is the Hakurei Shrine maiden, investigating the scarlet mist to restore peace to Gensokyo.</p>
+                <p class="prompt"><em>Character image supplied in the project assets; it is existing game-related artwork, not AI-generated.</em></p>
+                <figcaption>Reimu Hakurei</figcaption>
+            </figure>
+            <figure class="character-slide" hidden>
+                <img src="images/Th06RemasterMarisaBroom.png" alt="Marisa Kirisame riding her broom" width="180" height="149" loading="lazy">
+                <p class="character-description">Marisa Kirisame is a human magician whose curiosity leads her to investigate the strange mist.</p>
+                <p class="prompt"><em>Character image supplied in the project assets; it is existing game-related artwork, not AI-generated.</em></p>
+                <figcaption>Marisa Kirisame</figcaption>
+            </figure>
+            <figure class="character-slide" hidden>
+                <img src="images/358px-Th06ncMeiling.png" alt="Hong Meiling in her Chinese-style outfit" width="358" height="898" loading="lazy">
+                <p class="character-description">Hong Meiling is the Scarlet Devil Mansion's gatekeeper and a practitioner of martial arts.</p>
+                <p class="prompt"><em>Character image supplied in the project assets; it is existing game-related artwork, not AI-generated.</em></p>
+                <figcaption>Hong Meiling</figcaption>
+            </figure>
+            <figure class="character-slide" hidden>
+                <img src="images/Th06Patchouli.png" alt="Patchouli Knowledge, a purple-haired magician" width="128" height="217" loading="lazy">
+                <p class="character-description">Patchouli Knowledge is a bookish magician who studies elemental magic in the mansion's library.</p>
+                <p class="prompt"><em>Character image supplied in the project assets; it is existing game-related artwork, not AI-generated.</em></p>
+                <figcaption>Patchouli Knowledge</figcaption>
+            </figure>
+            <figure class="character-slide" hidden>
+                <img src="images/Th06NCKoakuma.gif" alt="Koakuma, a small demon with bat-like wings" width="155" height="150" loading="lazy">
+                <p class="character-description">Koakuma is a small demon who appears in the mansion's library alongside Patchouli.</p>
+                <p class="prompt"><em>Character image supplied in the project assets; it is existing game-related artwork, not AI-generated.</em></p>
+                <figcaption>Koakuma</figcaption>
+            </figure>
+            <figure class="character-slide" hidden>
+                <img src="images/427px-Th06NCSakuya.png" alt="Sakuya Izayoi in her blue-and-white maid outfit" width="427" height="896" loading="lazy">
+                <p class="character-description">Sakuya Izayoi is the mansion's head maid, known for her precise knife-throwing and time-manipulation abilities.</p>
+                <p class="prompt"><em>Character image supplied in the project assets; it is existing game-related artwork, not AI-generated.</em></p>
+                <figcaption>Sakuya Izayoi</figcaption>
+            </figure>
+            <figure class="character-slide" hidden>
+                <img src="images/Th06Remilia.png" alt="Remilia Scarlet, a young vampire with bat wings" width="256" height="256" loading="lazy">
+                <p class="character-description">Remilia Scarlet is the vampire mistress of the mansion and the source of the scarlet mist.</p>
+                <p class="prompt"><em>Character image supplied in the project assets; it is existing game-related artwork, not AI-generated.</em></p>
+                <figcaption>Remilia Scarlet</figcaption>
+            </figure>
+            <figure class="character-slide" hidden>
+                <img src="images/556px-Th06ncFlandre.png" alt="Flandre Scarlet with blonde hair and a crystal-adorned wing" width="556" height="898" loading="lazy">
+                <p class="character-description">Flandre Scarlet is Remilia's younger sister, a powerful vampire who lives secluded within the mansion.</p>
+                <p class="prompt"><em>Character image supplied in the project assets; it is existing game-related artwork, not AI-generated.</em></p>
+                <figcaption>Flandre Scarlet</figcaption>
+            </figure>
+            <nav class="slideshow-controls" aria-label="Character slideshow controls">
+                <button id="character-previous" type="button">Previous Character</button>
+                <p id="character-slide-status" aria-live="polite">Character 1 of 9: Rumia</p>
+                <button id="character-next" type="button">Next Character</button>
+            </nav>
         </section>
 
         <section id="when" aria-labelledby="when-heading" hidden>
@@ -180,9 +264,9 @@
             <p>EoSD is a focused, level-based game, so a short practice session can be rewarding. Play when you can give the screen your attention and take a break whenever your concentration starts to fade.</p>
             <p>A useful rhythm is to learn one stage at a time: first reach its boss, then study the attack patterns, and finally try to conserve lives and bombs for later stages.</p>
             <figure>
-                <img src="images/eosd-night.svg" alt="Original illustration of a crescent moon and stars above a quiet night landscape" width="900" height="420" loading="lazy">
-                <p class="prompt"><em>AI-art prompt: “Make an original Japanese-inspired paper illustration of a crescent moon and a few stars above quiet indigo mountains, with a warm orange paper border; serene, simple shapes, no text.”</em></p>
-                <figcaption>A quiet evening makes room for one more spell-card attempt.</figcaption>
+                <img src="images/pc98-touhou-optimized.jpg" alt="A vintage PC-98 computer displaying the Touhou Gensoukyou Lotus Land Story title screen" width="900" height="1200" loading="lazy">
+                <p class="prompt"><em>Photograph supplied in the project assets; resized for the page and not AI-generated.</em></p>
+                <figcaption>A PC-98-era Touhou game, from before EoSD's Windows release.</figcaption>
             </figure>
             <h3>A Gentle Practice Schedule</h3>
             <ul class="fact-list">
@@ -197,9 +281,9 @@
             <p>The game's journey moves through a stylized Gensokyo: a shrine, forest paths, a lake, and finally the Scarlet Devil Mansion. The scrolling stages turn each location into a backdrop for changing patterns and encounters.</p>
             <p>At home, the best play spot is a comfortable setup with a clear view of the screen and enough room for precise controls. A quiet space also makes it easier to notice the rhythm of incoming bullets.</p>
             <figure>
-                <img src="images/eosd-shrine.svg" alt="Original illustration of a vermilion torii gate leading toward a small shrine among mountains" width="900" height="420" loading="lazy">
-                <p class="prompt"><em>AI-art prompt: “Create an original flat Japanese folk-art scene of a vermilion torii gate on a mountain path leading to a tiny shrine, with parchment-colored sky and pine silhouettes; no lettering.”</em></p>
-                <figcaption>A vermilion gate marks the way toward the Hakurei Shrine.</figcaption>
+                <img src="images/thmap-optimized.jpg" alt="Illustrated map of Gensokyo and surrounding regions" width="1400" height="1167" loading="lazy">
+                <p class="prompt"><em>Map image supplied in the project assets; resized for the page and not AI-generated.</em></p>
+                <figcaption>A map of Gensokyo, the setting for Touhou's supernatural adventures.</figcaption>
             </figure>
             <h3>Places Along the Route</h3>
             <ul class="fact-list">
@@ -231,9 +315,9 @@
             <p>EoSD pairs demanding pattern-dodging with a vivid cast and a soundtrack that gives every stage its own mood. Repeated attempts can feel like solving a small visual puzzle: recognize the pattern, find the opening, and make it through.</p>
             <p>It is also a memorable entry point to Touhou's fan community and its many interpretations of Gensokyo. The game invites mastery, but its atmosphere and characters are just as much of the appeal.</p>
             <figure>
-                <img src="images/eosd-spellcard.svg" alt="Original illustration of a spell card with a stylized red sun, radiating lines, and paper talismans" width="900" height="420" loading="lazy">
-                <p class="prompt"><em>AI-art prompt: “Design an original Japanese-inspired spell-card emblem with a vermilion sun, elegant radiating lines, and simple paper talismans on a washi background; decorative and entirely free of words.”</em></p>
-                <figcaption>A spell card turns a duel into a vivid, patterned spectacle.</figcaption>
+                <img src="images/community-optimized.jpg" alt="Touhou fans gathered for a community event, including cosplayers and a fan banner" width="1400" height="647" loading="lazy">
+                <p class="prompt"><em>Community photograph supplied in the project assets; resized for the page and not AI-generated.</em></p>
+                <figcaption>Fans keep Touhou's characters and music alive through community events.</figcaption>
             </figure>
             <h3>Reasons to Return</h3>
             <ul class="fact-list">
@@ -242,29 +326,52 @@
                 <li>A charming supernatural setting with room for discovery.</li>
             </ul>
         </section>
+
+        <section id="ai-prompts" aria-labelledby="ai-prompts-heading" hidden>
+            <h2 id="ai-prompts-heading">AI Prompts</h2>
+            <p>The danmaku illustration in the How section is original SVG artwork created for this page with an AI image prompt.</p>
+            <p>The remaining photographs, game cover, map, and character images are existing images supplied in the project assets, not AI-generated.</p>
+            <p>The large photographs and map use optimized copies to reduce page loading while preserving their aspect ratios.</p>
+            <ul class="fact-list">
+                <li>Danmaku: orderly colored arcs framing a clear central lane on washi paper.</li>
+            </ul>
+        </section>
     </main>
 
     <footer>
-        <p>Fan-made educational hobby site. Touhou Project and its characters belong to their respective creators; illustrations on this page are original SVG artwork.</p>
-        <section id="ai-prompts" aria-labelledby="ai-prompts-heading">
-            <h2 id="ai-prompts-heading">AI Prompts</h2>
-            <p>The six original SVG illustrations were created for this page from the italicized image prompts shown with their figures.</p>
-            <p>Each prompt describes the subject, composition, and warm paper-art palette used to keep the illustrations visually consistent.</p>
-            <p>The SVG files are stored locally in the images folder and scale to fit the page without losing their aspect ratio.</p>
-            <ul class="fact-list">
-                <li>Scarlet mist: a paper-cut scarlet moon above layered mountains and a distant shrine gate.</li>
-                <li>Mansion: a woodblock-inspired mansion at dusk with lanterns and a muted crimson palette.</li>
-                <li>Night: a crescent moon and stars above indigo mountains on warm paper.</li>
-                <li>Shrine: a vermilion torii on a mountain path, with pine silhouettes and parchment sky.</li>
-                <li>Danmaku: orderly colored arcs framing a clear central lane on washi paper.</li>
-                <li>Spell card: a vermilion sun, radiating lines, and paper talismans on washi.</li>
-            </ul>
-        </section>
+        <p>Fan-made educational hobby site. Touhou Project and its characters belong to their respective creators; the danmaku illustration is original SVG artwork.</p>
+        <nav class="footer-tools" aria-label="Validation and accessibility tools">
+            <a href="https://validator.w3.org/nu/">HTML Validator</a>
+            <a href="https://jigsaw.w3.org/css-validator/">CSS Validator</a>
+            <a href="https://wave.webaim.org/">Accessibility Checker</a>
+        </nav>
     </footer>
 
     <script>
         const sections = [...document.querySelectorAll("main section")];
         const sectionLinks = [...document.querySelectorAll('nav a[href^="#"]')];
+        const characterSlides = [...document.querySelectorAll(".character-slide")];
+        const characterSlideStatus = document.querySelector("#character-slide-status");
+        let activeCharacterSlide = 0;
+
+        function showCharacterSlide(index) {
+            activeCharacterSlide = (index + characterSlides.length) % characterSlides.length;
+            characterSlides.forEach((slide, slideIndex) => {
+                slide.hidden = slideIndex !== activeCharacterSlide;
+            });
+
+            const characterName = characterSlides[activeCharacterSlide].querySelector("figcaption").textContent;
+            characterSlideStatus.textContent =
+                `Character ${activeCharacterSlide + 1} of ${characterSlides.length}: ${characterName}`;
+        }
+
+        document.querySelector("#character-previous").addEventListener("click", () => {
+            showCharacterSlide(activeCharacterSlide - 1);
+        });
+        document.querySelector("#character-next").addEventListener("click", () => {
+            showCharacterSlide(activeCharacterSlide + 1);
+        });
+        showCharacterSlide(0);
 
         function showSection() {
             const requestedId = window.location.hash.slice(1);
