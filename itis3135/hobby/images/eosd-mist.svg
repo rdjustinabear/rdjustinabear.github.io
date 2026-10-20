@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-labelledby="title">
+  <title id="title">Scarlet moon over a misty mountain shrine</title>
+  <rect width="900" height="420" fill="#382b37"/>
+  <circle cx="675" cy="115" r="76" fill="#c84539"/>
+  <path d="M0 235 150 135l132 110 174-151 159 148 134-95 151 97v176H0Z" fill="#58404a"/>
+  <path d="m0 295 172-98 148 114 188-102 158 92 130-77 104 58v138H0Z" fill="#372e38"/>
+  <path d="M0 312q90-30 180 0t180 0 180 0 180 0 180 0v108H0Z" fill="#ead2a3" opacity=".82"/>
+  <path d="M0 347q105-24 210 0t210 0 210 0 210 0 210 0" fill="none" stroke="#fff0ca" stroke-width="10" opacity=".75"/>
+  <g fill="none" stroke="#a6312d" stroke-width="12">
+    <path d="M372 276v93m-43-89h86m-76 18h66"/>
+    <path d="M350 369h44"/>
+  </g>
+  <path d="M367 275h54l-8-17h-38Z" fill="#a6312d"/>
+  <g fill="#f2d69e" opacity=".75"><circle cx="112" cy="102" r="4"/><circle cx="244" cy="73" r="3"/><circle cx="480" cy="76" r="4"/><circle cx="804" cy="209" r="4"/></g>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-labelledby="title">
+  <title id="title">Spell-card emblem with a vermilion sun and paper talismans</title>
+  <rect width="900" height="420" fill="#f0d7a7"/>
+  <path d="M0 0h900v420H0z" fill="none" stroke="#b9583d" stroke-width="18"/>
+  <circle cx="450" cy="210" r="116" fill="#ae3a32"/>
+  <circle cx="450" cy="210" r="89" fill="#e1a04d"/>
+  <circle cx="450" cy="210" r="57" fill="#ae3a32"/>
+  <g stroke="#8f302d" stroke-width="8">
+    <path d="M450 38v56M450 326v56M278 210h56M566 210h56M328 88l40 40m164 164 40 40M572 88l-40 40M368 292l-40 40"/>
+  </g>
+  <g fill="#fff0ca" stroke="#a6312d" stroke-width="5">
+    <path d="m175 74 43 14-14 100-43-14z"/>
+    <path d="m708 91 43-14 29 100-43 14z"/>
+    <path d="m176 264 43-14 29 100-43 14z"/>
+    <path d="m680 350 29-100 43 14-29 100z"/>
+  </g>
+  <g fill="#a6312d"><circle cx="196" cy="122" r="5"/><circle cx="737" cy="122" r="5"/><circle cx="208" cy="313" r="5"/><circle cx="722" cy="313" r="5"/></g>
+  <path d="M91 210h119m480 0h119" stroke="#bd7843" stroke-width="3" stroke-dasharray="4 10"/>
+</svg>

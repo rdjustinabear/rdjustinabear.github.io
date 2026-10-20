@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-labelledby="title">
+  <title id="title">Torii gate on a mountain path to a small shrine</title>
+  <rect width="900" height="420" fill="#f0d6a5"/>
+  <path d="M0 230 157 128l134 104 145-131 146 135 123-99 195 125v158H0Z" fill="#68735c"/>
+  <path d="M0 292 170 201l140 88 145-82 160 99 130-83 155 72v125H0Z" fill="#434b42"/>
+  <path d="M410 420 480 260h-60l45-68h-38l24-36h65l26 36h-38l44 68h-61l74 160Z" fill="#dca75e"/>
+  <g fill="#a6312d">
+    <path d="M294 178h312v20H294zM319 209h262v14H319zM338 195h18v143h-18zm207 0h18v143h-18z"/>
+    <path d="M351 156q100-26 198 0l-9 16H360Z"/>
+  </g>
+  <path d="M385 339h132v57H385z" fill="#8c392e"/>
+  <path d="m369 342 82-58 82 58Z" fill="#a6312d"/>
+  <path d="M436 355h30v41h-30z" fill="#f1d89f"/>
+  <g fill="#d7b879"><circle cx="164" cy="289" r="7"/><circle cx="717" cy="271" r="6"/><circle cx="758" cy="329" r="8"/></g>
+</svg>

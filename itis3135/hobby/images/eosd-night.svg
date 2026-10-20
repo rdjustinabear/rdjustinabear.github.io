@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-labelledby="title">
+  <title id="title">Crescent moon above a quiet night landscape</title>
+  <rect width="900" height="420" fill="#343747"/>
+  <circle cx="674" cy="111" r="62" fill="#f0d7a2"/>
+  <circle cx="701" cy="91" r="58" fill="#343747"/>
+  <g fill="#f4e6c5"><circle cx="128" cy="90" r="4"/><circle cx="238" cy="156" r="3"/><circle cx="392" cy="69" r="4"/><circle cx="500" cy="132" r="3"/><circle cx="805" cy="208" r="4"/><circle cx="119" cy="236" r="3"/></g>
+  <path d="M0 278 145 177l114 92 145-137 130 138 147-94 219 123v121H0Z" fill="#5a4a51"/>
+  <path d="M0 333 193 245l152 85 159-97 145 89 134-76 117 63v111H0Z" fill="#393641"/>
+  <path d="M0 376q120-28 240 0t240 0 240 0 180 0v44H0Z" fill="#b35a3c"/>
+  <path d="M0 378q120-28 240 0t240 0 240 0 180 0" fill="none" stroke="#efd29c" stroke-width="5" opacity=".8"/>
+</svg>

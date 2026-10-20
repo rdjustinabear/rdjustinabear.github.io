@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-labelledby="title">
+  <title id="title">Colorful danmaku arcs around a safe lane</title>
+  <rect width="900" height="420" fill="#3c3039"/>
+  <path d="M0 315Q450-10 900 315M60 360Q450 88 840 360M-45 205Q450 480 945 205" fill="none" stroke="#a94b43" stroke-width="3" opacity=".7"/>
+  <path d="M110 45Q450 380 790 45M205 0Q450 400 695 0" fill="none" stroke="#db9c4c" stroke-width="3" opacity=".7"/>
+  <g fill="#e7b459">
+    <circle cx="83" cy="236" r="8"/><circle cx="130" cy="207" r="8"/><circle cx="183" cy="180" r="8"/><circle cx="240" cy="159" r="8"/><circle cx="300" cy="143" r="8"/><circle cx="365" cy="134" r="8"/>
+    <circle cx="817" cy="236" r="8"/><circle cx="770" cy="207" r="8"/><circle cx="717" cy="180" r="8"/><circle cx="660" cy="159" r="8"/><circle cx="600" cy="143" r="8"/><circle cx="535" cy="134" r="8"/>
+  </g>
+  <g fill="#d45652">
+    <circle cx="170" cy="328" r="7"/><circle cx="221" cy="300" r="7"/><circle cx="276" cy="278" r="7"/><circle cx="335" cy="263" r="7"/>
+    <circle cx="730" cy="328" r="7"/><circle cx="679" cy="300" r="7"/><circle cx="624" cy="278" r="7"/><circle cx="565" cy="263" r="7"/>
+  </g>
+  <path d="M443 401 450 347l7 54Z" fill="#f3d79f"/>
+  <circle cx="450" cy="354" r="12" fill="#fff2d2" stroke="#a6312d" stroke-width="4"/>
+  <path d="M397 366h-25m156 0h-25" stroke="#f5e1b3" stroke-width="2" stroke-dasharray="5 7"/>
+</svg>

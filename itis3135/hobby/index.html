@@ -3,99 +3,284 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A placeholder for my ITIS 3135 hobby website.">
-    <title>Hobby Site | In Progress</title>
+    <meta name="description" content="A fan's guide to the world, play, and atmosphere of Touhou Project: Embodiment of Scarlet Devil.">
+    <title>Scarlet Danmaku | Touhou EoSD</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <style>
         :root {
             color-scheme: light;
-            --ink: #25302b;
-            --muted: #586b60;
-            --paper: #f5f0df;
-            --panel: #fffdf6;
-            --accent: #a44d32;
-            --accent-dark: #71351f;
-            --line: #d8cdb4;
+            --ink: #39251d;
+            --muted: #745a45;
+            --paper: #e7a65e;
+            --paper-light: #f4d6a1;
+            --panel: #fff4dc;
+            --accent: #a6312d;
+            --accent-dark: #70211e;
+            --line: #c98347;
+            --gold: #d39438;
         }
 
         * { box-sizing: border-box; }
 
+        html { scroll-behavior: smooth; }
+
         body {
             margin: 0;
             color: var(--ink);
-            background: var(--paper);
-            font-family: "Trebuchet MS", Arial, sans-serif;
-            line-height: 1.6;
+            background-color: var(--paper);
+            background-image:
+                radial-gradient(ellipse at 16% 12%, rgb(255 241 194 / 42%), transparent 40%),
+                repeating-linear-gradient(3deg, rgb(112 65 28 / 3%) 0 1px, transparent 1px 6px);
+            font-family: Georgia, "Times New Roman", serif;
+            line-height: 1.7;
         }
 
         header, main, footer {
-            width: min(900px, calc(100% - 2rem));
+            width: min(1050px, calc(100% - 2rem));
             margin-inline: auto;
         }
 
-        header { padding: 3rem 0 1.5rem; }
-        header h1 { margin: 0; color: var(--accent-dark); font-size: clamp(2rem, 6vw, 3.5rem); }
-        header p, footer { color: var(--muted); }
-
-        main {
-            margin-bottom: 2rem;
-            padding: clamp(1.25rem, 4vw, 2.5rem);
-            background: var(--panel);
-            border: 1px solid var(--line);
-            border-radius: 1rem;
-            box-shadow: 0 12px 28px rgb(56 43 25 / 9%);
-        }
+        header { padding: 2.5rem 0 1.5rem; }
+        .eyebrow { margin: 0; color: var(--accent-dark); font-variant: small-caps; letter-spacing: .12em; }
+        header h1 { margin: .2rem 0; color: var(--accent-dark); font-size: clamp(2.2rem, 7vw, 4.4rem); line-height: 1.1; }
+        header .intro { max-width: 62ch; margin: .7rem 0 1.25rem; color: var(--muted); }
 
         nav ul {
             display: flex;
             flex-wrap: wrap;
-            gap: .5rem 1rem;
-            margin: 1rem 0 0;
+            gap: .45rem .7rem;
+            margin: 0;
             padding: 0;
             list-style: none;
         }
 
-        a { color: var(--accent-dark); font-weight: 700; }
-        a:hover, a:focus-visible { color: var(--accent); }
-        .status { color: var(--accent-dark); font-size: 1.25rem; font-weight: 700; }
-        .checklist { padding-left: 1.25rem; }
-        .checklist li { margin-block: .35rem; }
-        footer { padding: 0 0 2rem; text-align: center; }
+        nav a {
+            display: block;
+            padding: .35rem .8rem;
+            color: var(--accent-dark);
+            border: 1px solid var(--accent-dark);
+            border-radius: 999px;
+            font-weight: 700;
+            text-decoration: none;
+        }
 
-        @media (prefers-reduced-motion: no-preference) {
-            a { transition: color 150ms ease-in-out; }
+        nav a:hover, nav a:focus-visible, nav a[aria-current="page"] {
+            color: var(--panel);
+            background: var(--accent-dark);
+        }
+
+        main {
+            min-height: 34rem;
+            margin-bottom: 2rem;
+            padding: clamp(1.2rem, 5vw, 3rem);
+            background: var(--panel);
+            border: 2px solid var(--line);
+            box-shadow: 0 14px 30px rgb(85 42 22 / 18%);
+        }
+
+        main::before, main::after {
+            display: block;
+            color: var(--accent);
+            content: "❖　❖　❖";
+            font-size: 1.2rem;
+            letter-spacing: .55rem;
+            text-align: center;
+        }
+
+        section { padding-block: 1.5rem; }
+        section h2 { margin: 0 0 .7rem; color: var(--accent-dark); font-size: clamp(1.8rem, 4vw, 2.6rem); }
+        section h3 { margin-bottom: .3rem; color: var(--accent); }
+        section p { max-width: 75ch; }
+        .lead { font-size: 1.15rem; }
+
+        figure {
+            max-width: 720px;
+            margin: 1.5rem auto;
+            padding: .7rem;
+            background: #f8e5bd;
+            border: 1px solid var(--line);
+        }
+
+        figure img {
+            display: block;
+            width: 100%;
+            max-height: 310px;
+            object-fit: cover;
+            border: 1px solid rgb(112 33 30 / 30%);
+        }
+
+        figcaption { margin-top: .5rem; color: var(--accent-dark); font-weight: 700; }
+        .prompt { margin: .15rem 0 0; color: var(--muted); font-size: .9rem; font-weight: 400; }
+        .prompt em { font-style: italic; }
+        .fact-list { padding-left: 1.4rem; }
+        .fact-list li { margin-block: .35rem; }
+        .course-link { color: var(--accent-dark); }
+        footer { padding: 0 0 2rem; color: var(--muted); text-align: center; }
+
+        .js-enabled section[hidden] { display: none; }
+        .js-enabled section:not([hidden]) { animation: reveal 180ms ease-out; }
+
+        @keyframes reveal {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after { animation-duration: .01ms !important; }
         }
     </style>
 </head>
 <body>
     <header>
-        <p>ITIS 3135 · Hobby project</p>
-        <h1>My Hobby Website</h1>
-        <p>A starter page for the multi-section hobby assignment.</p>
-        <nav aria-label="Hobby site navigation">
+        <p class="eyebrow">A fan's field guide · Touhou Project</p>
+        <h1>Scarlet Danmaku</h1>
+        <p class="intro">A guide to <i>Embodiment of Scarlet Devil</i> (EoSD), the spell-card spectacle that introduced many players to Gensokyo.</p>
+        <nav aria-label="Hobby site sections">
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="../index.html">Course site</a></li>
+                <li><a href="#what" aria-current="page">What</a></li>
+                <li><a href="#who">Who</a></li>
+                <li><a href="#when">When</a></li>
+                <li><a href="#where">Where</a></li>
+                <li><a href="#how">How</a></li>
+                <li><a href="#why">Why</a></li>
+                <li><a class="course-link" href="../index.html">Course site</a></li>
             </ul>
         </nav>
     </header>
 
-    <main id="home">
-        <h2>Website in progress</h2>
-        <p class="status">This is a placeholder—not the completed assignment.</p>
-        <p>The hobby, writing, images, and final section navigation will be added here.</p>
-        <h3>Planned sections</h3>
-        <ul class="checklist">
-            <li>What — an introduction to the hobby</li>
-            <li>Who — the person or people behind the site</li>
-            <li>When, Where, How, and Why</li>
-            <li>AI Prompts and image credits</li>
-        </ul>
-        <p>Working assets can be stored in this page’s <strong>images</strong> folder.</p>
+    <main>
+        <section id="what" aria-labelledby="what-heading">
+            <h2 id="what-heading">What — A Scarlet-Sky Adventure</h2>
+            <p class="lead"><i>Embodiment of Scarlet Devil</i> is a vertically scrolling bullet-hell game in which the shrine maiden Reimu Hakurei or magician Marisa Kirisame investigates a strange scarlet mist covering Gensokyo.</p>
+            <p>Players weave through patterned volleys, collect power, and challenge a procession of memorable residents. EoSD is the sixth Touhou game and the first Windows-era entry in the series.</p>
+            <figure>
+                <img src="images/eosd-mist.svg" alt="Original illustration of a scarlet moon rising above a misty mountain and shrine gate" width="900" height="420">
+                <figcaption>The scarlet mist rolls over Gensokyo.</figcaption>
+                <p class="prompt"><em>AI-art prompt: “Create an original, flat Japanese-inspired paper-cut illustration of a scarlet moon, layered mountain silhouettes, and a distant shrine gate in warm vermilion and parchment tones; no lettering.”</em></p>
+            </figure>
+            <h3>At a glance</h3>
+            <ul class="fact-list">
+                <li>Genre: vertically scrolling danmaku (bullet hell).</li>
+                <li>Setting: Gensokyo, where humans and supernatural beings coexist.</li>
+                <li>Goal: investigate the mist and survive the spell-card duels.</li>
+            </ul>
+        </section>
+
+        <section id="who" aria-labelledby="who-heading" hidden>
+            <h2 id="who-heading">Who — Residents of the Scarlet Devil Mansion</h2>
+            <p>The journey brings Reimu and Marisa into conflict with the people behind the mist. Each stage introduces a new opponent with a distinct personality, theme, and danmaku style.</p>
+            <p>The mansion's residents include its gatekeeper Hong Meiling, library-dwelling magician Patchouli Knowledge, and the maid Sakuya Izayoi. At the center is its young mistress, Remilia Scarlet, alongside her younger sister Flandre.</p>
+            <figure>
+                <img src="images/eosd-castle.svg" alt="Original illustration of a red-roofed European-style mansion framed by paper lanterns" width="900" height="420" loading="lazy">
+                <figcaption>The Scarlet Devil Mansion stands at the heart of the mystery.</figcaption>
+                <p class="prompt"><em>AI-art prompt: “Draw an original Japanese woodblock-inspired view of a grand red-roofed mansion at dusk, framed by two small paper lanterns; muted crimson, ink, and parchment palette; no characters or lettering.”</em></p>
+            </figure>
+            <h3>Three sides of the story</h3>
+            <ul class="fact-list">
+                <li>Reimu follows the incident as the Hakurei Shrine maiden.</li>
+                <li>Marisa investigates as a curious magician and playable rival.</li>
+                <li>The mansion's residents turn each confrontation into a characterful duel.</li>
+            </ul>
+        </section>
+
+        <section id="when" aria-labelledby="when-heading" hidden>
+            <h2 id="when-heading">When — A Good Time to Play</h2>
+            <p>EoSD is a focused, level-based game, so a short practice session can be rewarding. Play when you can give the screen your attention and take a break whenever your concentration starts to fade.</p>
+            <p>A useful rhythm is to learn one stage at a time: first reach its boss, then study the attack patterns, and finally try to conserve lives and bombs for later stages.</p>
+            <figure>
+                <img src="images/eosd-night.svg" alt="Original illustration of a crescent moon and stars above a quiet night landscape" width="900" height="420" loading="lazy">
+                <figcaption>A quiet evening makes room for one more spell-card attempt.</figcaption>
+                <p class="prompt"><em>AI-art prompt: “Make an original Japanese-inspired paper illustration of a crescent moon and a few stars above quiet indigo mountains, with a warm orange paper border; serene, simple shapes, no text.”</em></p>
+            </figure>
+            <h3>A gentle practice schedule</h3>
+            <ul class="fact-list">
+                <li>Warm up with a stage you already know.</li>
+                <li>Practice one difficult section or spell card in focused bursts.</li>
+                <li>Finish with a full run only when you feel ready, not on a timer.</li>
+            </ul>
+        </section>
+
+        <section id="where" aria-labelledby="where-heading" hidden>
+            <h2 id="where-heading">Where — From the Hakurei Shrine to the Mansion</h2>
+            <p>The game's journey moves through a stylized Gensokyo: a shrine, forest paths, a lake, and finally the Scarlet Devil Mansion. The scrolling stages turn each location into a backdrop for changing patterns and encounters.</p>
+            <p>At home, the best play spot is a comfortable setup with a clear view of the screen and enough room for precise controls. A quiet space also makes it easier to notice the rhythm of incoming bullets.</p>
+            <figure>
+                <img src="images/eosd-shrine.svg" alt="Original illustration of a vermilion torii gate leading toward a small shrine among mountains" width="900" height="420" loading="lazy">
+                <figcaption>A vermilion gate marks the way toward the Hakurei Shrine.</figcaption>
+                <p class="prompt"><em>AI-art prompt: “Create an original flat Japanese folk-art scene of a vermilion torii gate on a mountain path leading to a tiny shrine, with parchment-colored sky and pine silhouettes; no lettering.”</em></p>
+            </figure>
+            <h3>Places along the route</h3>
+            <ul class="fact-list">
+                <li>The Hakurei Shrine: Reimu's home and a starting point for incidents.</li>
+                <li>Misty Lake: a broad, open stage watched over by the mansion's gatekeeper.</li>
+                <li>Scarlet Devil Mansion: a maze-like home where the mystery reaches its source.</li>
+            </ul>
+        </section>
+
+        <section id="how" aria-labelledby="how-heading" hidden>
+            <h2 id="how-heading">How — Read the Danmaku</h2>
+            <p>Keep your eyes on the spaces between bullets instead of tracking a single projectile. Small, deliberate movements help you stay in safe lanes while leaving room to dodge the next wave.</p>
+            <p>Learn the basic tools: collect items, build shot power, and use a bomb when danger overwhelms you. EoSD offers different shot types for Reimu and Marisa, so experiment to find a style that feels natural.</p>
+            <figure>
+                <img src="images/eosd-danmaku.svg" alt="Original diagram-like illustration of colorful circular danmaku patterns surrounding a safe central lane" width="900" height="420" loading="lazy">
+                <figcaption>Danmaku patterns reward patience and a clear path through the gaps.</figcaption>
+                <p class="prompt"><em>AI-art prompt: “Illustrate an original abstract bullet-hell pattern as orderly circles and arcs of small colored beads around a clear central lane on warm washi paper; graphic, nonviolent, no text.”</em></p>
+            </figure>
+            <h3>Beginner's toolkit</h3>
+            <ul class="fact-list">
+                <li>Move carefully; you usually need less movement than you think.</li>
+                <li>Watch the player character and nearby gaps, not every bullet at once.</li>
+                <li>Use practice mode and bombs to learn patterns without frustration.</li>
+            </ul>
+        </section>
+
+        <section id="why" aria-labelledby="why-heading" hidden>
+            <h2 id="why-heading">Why — The Charm of EoSD</h2>
+            <p>EoSD pairs demanding pattern-dodging with a vivid cast and a soundtrack that gives every stage its own mood. Repeated attempts can feel like solving a small visual puzzle: recognize the pattern, find the opening, and make it through.</p>
+            <p>It is also a memorable entry point to Touhou's fan community and its many interpretations of Gensokyo. The game invites mastery, but its atmosphere and characters are just as much of the appeal.</p>
+            <figure>
+                <img src="images/eosd-spellcard.svg" alt="Original illustration of a spell card with a stylized red sun, radiating lines, and paper talismans" width="900" height="420" loading="lazy">
+                <figcaption>A spell card turns a duel into a vivid, patterned spectacle.</figcaption>
+                <p class="prompt"><em>AI-art prompt: “Design an original Japanese-inspired spell-card emblem with a vermilion sun, elegant radiating lines, and simple paper talismans on a washi background; decorative and entirely free of words.”</em></p>
+            </figure>
+            <h3>Reasons to return</h3>
+            <ul class="fact-list">
+                <li>Memorable stage themes and character themes.</li>
+                <li>Distinct spell-card patterns that reward practice.</li>
+                <li>A charming supernatural setting with room for discovery.</li>
+            </ul>
+        </section>
     </main>
 
     <footer>
-        <p>Hobby site placeholder · ITIS 3135</p>
+        <p>Fan-made educational hobby site. Touhou Project and its characters belong to their respective creators; illustrations on this page are original SVG artwork.</p>
     </footer>
+
+    <script>
+        const sections = [...document.querySelectorAll("main section")];
+        const sectionLinks = [...document.querySelectorAll('nav a[href^="#"]')];
+
+        function showSection() {
+            const requestedId = window.location.hash.slice(1);
+            const activeSection = sections.find((section) => section.id === requestedId) ||
+                sections.find((section) => section.id === "what");
+
+            document.body.classList.add("js-enabled");
+            sections.forEach((section) => {
+                section.hidden = section !== activeSection;
+            });
+            sectionLinks.forEach((link) => {
+                if (link.hash === `#${activeSection.id}`) {
+                    link.setAttribute("aria-current", "page");
+                } else {
+                    link.removeAttribute("aria-current");
+                }
+            });
+        }
+
+        showSection();
+        window.addEventListener("hashchange", showSection);
+    </script>
 </body>
 </html>

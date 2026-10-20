@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-labelledby="title">
+  <title id="title">The Scarlet Devil Mansion at dusk</title>
+  <rect width="900" height="420" fill="#e8c892"/>
+  <circle cx="727" cy="86" r="50" fill="#ad3c33"/>
+  <path d="M0 308 130 216l127 92 126-125 154 130 124-102 239 116v93H0Z" fill="#78604f"/>
+  <path d="M175 205h550v168H175z" fill="#733331"/>
+  <path d="m145 218 92-82 87 82v155H145Zm326 0 91-82 92 82v155H471Z" fill="#a34137"/>
+  <path d="m210 143 27-55 27 55Zm326 0 27-55 27 55Z" fill="#70211e"/>
+  <g fill="#f1d89f"><path d="M255 256h48v54h-48zm111 0h48v54h-48zm156 0h48v54h-48zm111 0h48v54h-48z"/></g>
+  <path d="M400 286a50 50 0 0 1 100 0v87H400Z" fill="#422934"/>
+  <g fill="#a6312d"><path d="M96 198h8v175h-8zm-29 9h66v8H67zm7-24 26-21 26 21z"/><path d="M786 198h8v175h-8zm-29 9h66v8h-66zm7-24 26-21 26 21z"/></g>
+  <path d="M0 373h900v47H0z" fill="#3e3434"/>
+</svg>
